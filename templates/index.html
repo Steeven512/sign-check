@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <span style="display:none" id="ShaLBB">{{shaLBB}}</span>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4  borderbottom">
+          <a href="https://0.0.0.0:52468/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Crypto::DB-256::S'Sums: Sign & Check
+            </br>Front Rest API Web </span>
+          </a>
+    
+        </header>
+    
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center py-3 mb-4 borderbottom">
+      <form id="myForm" name="myForm">
+      
+        <label for="fname">Priv Key:</label><br>
+        <input type="text" id="fname" name="fname">
+        
+        <br><br>
+
+        <label for="fname">Message:</label><br>
+        <input type="text" id="fname" name="fname">
+            <br> <br>
+        <button type="button" class="btn btn-dark" onclick="SignMsg(this)">Sign From JS Front-end <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+        <br><br>
+        <label for="fname">signature:</label><br>
+        <input type="text" id="signature-input" name="fname">
+
+        <button type="button" class="btn btn-dark" onclick="verifySignature(this)">signature check <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          
+
+      </form>
+    </div>
+
+    <div class="mx-auto" style="max-width: 500px;">
+      <p class="text-wrap" style="word-wrap: break-word;">signature check JS front client status:</p><p class="text-wrap" style="word-wrap: break-word;" id="firmfront"></p><br>
+      <p class="text-wrap" style="word-wrap: break-word;">signature check back-end server status:</p><p class="text-wrap" style="word-wrap: break-word;" id="firmback"></p><br>
+
+    </div>
+
+<br><br>
+
+<script  src="requestjson.js" type="module"></script>
+<script  src="signer.js"></script>
+
+</body>
+</html>
