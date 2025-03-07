@@ -1,3 +1,3 @@
-Crypto::DB-256::S'Sums signature algorithm
+SS signature algorithm
 
-In the front-end the signature is generated with a private key and a message, then the signature is verified with the public key and the message from the front-end using jsrsasign and in the back-end with Crypto++
+This application is a demo that runs a server that serves an http html client with js which is responsible for generating and signing messages using Jsrasign with the elliptic curve cryptographic scheme secp256k1 from a private key and then the message and the authenticity of its sender are checked by the backend server using cryptopp
